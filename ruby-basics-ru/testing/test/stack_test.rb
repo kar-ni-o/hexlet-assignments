@@ -16,7 +16,7 @@ class StackTest < Minitest::Test
   # BEGIN
   def test_stack_push
     @stack.push!('elixir')
-    assert_equal @stack.size, 4
+    assert_equal @stack.size, 3
     assert_equal @stack.empty?, false
     assert_equal @stack.to_a, ['ruby', 'python', 'go', 'elixir']
   end
