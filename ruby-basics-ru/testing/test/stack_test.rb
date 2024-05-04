@@ -16,22 +16,22 @@ class StackTest < Minitest::Test
   # BEGIN
   def test_stack_push
     @stack.push!('elixir')
-    assert_equal @stack.size, 4
-    assert_equal @stack.empty?, false
-    assert_equal @stack.to_a, ['ruby', 'python', 'go', 'elixir']
+    assert { @stack.size == 4 }
+    assert { @stack.empty? == false }
+    assert { @stack.to_a == ['ruby', 'python', 'go', 'elixir'] }
   end
 
   def test_stack_pop
     @stack.pop!
-    assert_equal @stack.size, 2
-    assert_equal @stack.empty?, false
-    assert_equal @stack.to_a, ['ruby', 'python']
+    assert { @stack.size == 2 }
+    assert { @stack.empty? == false }
+    assert { @stack.to_a == ['ruby', 'python'] }
   end
 
   def test_stack_clear
     @stack.clear!
-    assert_equal @stack.to_a, []
-    assert_equal @stack.empty?, true
+    assert { @stack.to_a == [] }
+    assert { @stack.empty? == true }
   end
   # END
 end
